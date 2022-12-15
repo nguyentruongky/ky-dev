@@ -4,6 +4,7 @@ import SectionHeader from './SectionHeader'
 import { motion } from 'framer-motion'
 import { motionConfig } from '../common'
 import { projects } from '../data/projects'
+import { Project } from '../@types/Project'
 
 type Props = {}
 
@@ -17,7 +18,9 @@ export default function Projects({}: Props) {
 
       <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80'>
         {projects.map(project => (
-          <ProjectCard key={project.name} {...project} />
+          <section key={project.name} id={project.id}>
+            <ProjectCard key={project.name} {...project} />
+          </section>
         ))}
       </div>
 
@@ -26,37 +29,30 @@ export default function Projects({}: Props) {
   )
 }
 
-type Project = {
-  name: string
-  rounded?: boolean
-  screenshots: string[]
-  details: string[]
-  imageWidth?: number
-  tech: string[]
-  demoUrl?: string
-}
-
-const ProjectCard = (props: Project) => {
+const ProjectCard = (prop: Project) => {
   return (
-    <div className='w-screen flex-shrink-0 snap-center snap-mandatory flex flex-col space-y-5 items-center justify-center p-6 md:p-20 md:px-44 h-screen '>
+    <div
+      id={prop.name}
+      className='w-screen flex-shrink-0 snap-center snap-mandatory flex flex-col space-y-5 items-center justify-center p-6 md:p-20 md:px-44 h-screen '
+    >
       <div className='flex flex-row overflow-x-scroll scrollbar-none'>
-        {props.screenshots.length === 1 && (
+        {prop.screenshots.length === 1 && (
           <img
-            key={props.screenshots[0]}
-            className={`w-[${props.imageWidth}px] aspect-auto mr-1 ${
-              props.rounded ? 'rounded-full' : ''
+            key={prop.screenshots[0]}
+            className={`w-[${prop.imageWidth}px] aspect-auto mr-1 ${
+              prop.rounded ? 'rounded-full' : ''
             }`}
-            src={props.screenshots[0]}
+            src={prop.screenshots[0]}
             alt=''
           />
         )}
 
-        {props.screenshots.length > 1 &&
-          props.screenshots.map(url => (
+        {prop.screenshots.length > 1 &&
+          prop.screenshots.map(url => (
             <img
               key={url}
               className={`w-[100px] md:w-[150px] aspect-auto mr-1 ${
-                props.rounded ? 'rounded-full' : ''
+                prop.rounded ? 'rounded-full' : ''
               }`}
               src={url}
               alt=''
@@ -65,24 +61,24 @@ const ProjectCard = (props: Project) => {
       </div>
 
       <div className='px-0 md:px-10 max-w-6xl w-full'>
-        <div className='text-xl md:text-3xl font-bold'>{props.name}</div>
+        <div className='text-xl md:text-3xl font-bold'>{prop.name}</div>
 
         <div className='flex flex-row items-start overflow-x-scroll mt-2 flex-nowrap md:flex-wrap scrollbar-none justify-start'>
-          {(props.tech ?? []).map(tech => (
+          {(prop.tech ?? []).map(tech => (
             <Tag key={tech} title={tech} />
           ))}
         </div>
 
         <p className='text-lg text-center md:text-left mt-4'>
           <ul className='list-disc space-y-4 ml-5 text-md md:text-xl text-left'>
-            {(props.details ?? []).map(item => (
+            {(prop.details ?? []).map(item => (
               <li key={item}>{item}</li>
             ))}
 
-            {props.demoUrl && (
+            {prop.demoUrl && (
               <li>
                 <a
-                  href={props.demoUrl}
+                  href={prop.demoUrl}
                   target='_blank'
                   rel='noreferrer'
                   className='underline'

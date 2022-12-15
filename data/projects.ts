@@ -1,5 +1,8 @@
-export const projects = [
+import { Project } from '../@types/Project'
+
+export const projects: Project[] = [
   {
+    id: 'verkly',
     name: 'Verkly',
     screenshots: [
       'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6533213d-38ca-4bdb-b398-0740b49d3fb2/verkly-1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T015654Z&X-Amz-Expires=86400&X-Amz-Signature=39c3bcfe6a2f4a5a37397a5309a25594d0833059372b14d1e5d9defec7e94757&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22verkly-1.PNG.png%22&x-id=GetObject',
@@ -15,6 +18,7 @@ export const projects = [
     tech: ['CoreBluetooth', 'CoreLocation', 'GeoFence']
   },
   {
+    id: 'baucu',
     name: 'Baucu',
     imageWidth: 300,
     screenshots: [
@@ -28,6 +32,7 @@ export const projects = [
     tech: ['Next.js', 'IndexedDB', 'Prisma', 'PostgreSQL']
   },
   {
+    id: 'acamp',
     name: 'Acamp',
     screenshots: [
       'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/265565d0-5dbe-4c09-8eeb-f9837a795d77/acamp-1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T101004Z&X-Amz-Expires=86400&X-Amz-Signature=534510e33f076b9a0f27247f6bd357522cc7c7572c03ace8f653f73c0ba970fe&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22acamp-1.PNG.png%22&x-id=GetObject',
@@ -45,6 +50,7 @@ export const projects = [
     tech: ['Google Maps', 'Apple Pay', 'Realm', 'Snapkit']
   },
   {
+    id: 'worx360',
     name: 'Worx360',
     screenshots: [
       'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/014046ad-618c-4e8f-8401-2df4ece6ab90/worx360-1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221214T214207Z&X-Amz-Expires=86400&X-Amz-Signature=9956680398dc92484797974b9858ab95e2bef71ab9c7c667dc35fcfdcdce0a07&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22worx360-1.PNG.png%22&x-id=GetObject',
@@ -69,6 +75,7 @@ export const projects = [
     ]
   },
   {
+    id: 'infinidus',
     name: 'Infinidus',
     screenshots: [
       'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a7425c5e-2733-4fe7-9ed0-7b1986aa50e4/infinidus-1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T012252Z&X-Amz-Expires=86400&X-Amz-Signature=8dc8c58ef9e91495b7a48320ef457482f5f91efff98eef1bbcec9234d7d660ee&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22infinidus-1.png%22&x-id=GetObject',
@@ -84,6 +91,24 @@ export const projects = [
     tech: ['Nest.js', 'Prisma', 'PostgreSQL', 'AWS', 'Twilio']
   },
   {
+    id: 'done',
+    name: 'Done!',
+    screenshots: [
+      'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c8c1fc0e-290e-4b35-b5d4-ee2565fe58b6/done-1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T104014Z&X-Amz-Expires=86400&X-Amz-Signature=9f0cf3ecb4bcbcd3181f126d285d7353fc262085e19234eda548e6244c9c2508&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22done-1.PNG.png%22&x-id=GetObject',
+      'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4a1e992c-1dc6-48c7-855b-69a70aa33ac9/done-2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T104018Z&X-Amz-Expires=86400&X-Amz-Signature=db50c5a9f1e69ddfd57eaa81ebf37e730f8e35016edce19a7a6dfe959def5283&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22done-2.PNG.png%22&x-id=GetObject',
+      'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cbfaa860-07e6-48cb-bf50-563497b801bb/done-3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T104022Z&X-Amz-Expires=86400&X-Amz-Signature=f0084d140fd8966ea43c4eede5329ddfa715451daee02d72d15fb124f84637ab&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22done-3.PNG.png%22&x-id=GetObject',
+      'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6429ae26-3cf1-4975-9a2f-0ba16de53602/done-4.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T104026Z&X-Amz-Expires=86400&X-Amz-Signature=a5906a944a6393ee185443b6aa3ead5461ff0729e3e8be993585a990d230d43d&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22done-4.PNG.png%22&x-id=GetObject',
+      'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/77e6a2f4-e0dd-4330-8997-4e418fe7d372/done-5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T104031Z&X-Amz-Expires=86400&X-Amz-Signature=71ed0f204aa73fffca69b3667d6120dc42cacf886a58b39fb3f7170370e37290&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22done-5.PNG.png%22&x-id=GetObject'
+    ],
+    details: [
+      'Authenticated with Firebase',
+      'Persistence with Realm for offline support.',
+      'Built UI programmatically with Snapkit'
+    ],
+    tech: ['Firebase', 'Snapkit', 'Realm']
+  },
+  {
+    id: 'groovetime',
     name: 'Groovetime',
     imageWidth: 800,
     screenshots: [
@@ -97,6 +122,7 @@ export const projects = [
     tech: ['SwiftUI', 'Moonpay', 'Java', 'Web3Auth']
   },
   {
+    id: 'neuroid',
     name: 'Neuro-ID-SDK',
     imageWidth: 150,
     screenshots: [
@@ -109,6 +135,7 @@ export const projects = [
     tech: ['Observation pattern', 'Method swizzling', 'SQLCipher', 'SQLite']
   },
   {
+    id: 'video-recorder',
     name: 'The social app - Video recorder',
     imageWidth: 150,
     rounded: true,
@@ -124,6 +151,7 @@ export const projects = [
     demoUrl: 'https://youtu.be/LzOH53MIQA8'
   },
   {
+    id: 'ogenii',
     name: 'Ogenii',
     screenshots: [
       'https://nguyentruongky.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5fa21f73-c157-47ca-88b2-cdf145b0fe70%2FScreenshots-11.jpg?id=7543e5f7-f49a-41ac-b3f3-84bb5c607de0&table=block&spaceId=accf97a8-8a21-4268-8e5d-8f37c01e9a3b&width=2000&userId=&cache=v2',
@@ -146,6 +174,7 @@ export const projects = [
     ]
   },
   {
+    id: 'webgaff',
     name: 'WebGaff',
     screenshots: [
       'https://nguyentruongky.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F57c1c044-7b5c-4d7b-9d90-7d018fdb23e3%2Fwebgaff_screenshot_2.jpg?id=f9e6d1d4-b75b-405c-8f93-9ce31ccba585&table=block&spaceId=accf97a8-8a21-4268-8e5d-8f37c01e9a3b&width=1740&userId=&cache=v2',
@@ -160,6 +189,7 @@ export const projects = [
     tech: ['Storyboard', 'CoreLocation', 'Google Maps SDK']
   },
   {
+    id: 'opiny',
     name: 'Opiyn',
     screenshots: [
       'https://nguyentruongky.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F319fe5c1-4a74-4331-9027-474da8e8dafe%2FScreenshots-17.jpg?id=161bfabc-5a76-49b4-827e-5462326ae3c2&table=block&spaceId=accf97a8-8a21-4268-8e5d-8f37c01e9a3b&width=2000&userId=&cache=v2',
@@ -170,6 +200,7 @@ export const projects = [
     tech: ['Firebase', 'Geofencing', 'Google Maps SDK', 'Google Places SDK']
   },
   {
+    id: 'drips',
     name: 'Drips',
     screenshots: [
       'https://nguyentruongky.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd6033b09-5eab-46ec-9d04-5b9d82c715f9%2FIMG_1267_(1).png?id=ffae9e2f-94dc-444c-8e46-3fec6c352e63&table=block&spaceId=accf97a8-8a21-4268-8e5d-8f37c01e9a3b&width=1660&userId=&cache=v2',
@@ -184,6 +215,7 @@ export const projects = [
     tech: ['Stripe', 'Swift', 'Auto Layout Programmatically ']
   },
   {
+    id: 'fixir',
     name: 'Fixir',
     imageWidth: 100,
     screenshots: [
@@ -203,6 +235,7 @@ export const projects = [
     ]
   },
   {
+    id: 'streamy',
     name: 'Streamy',
     imageWidth: 100,
     screenshots: [
@@ -217,6 +250,7 @@ export const projects = [
     ]
   },
   {
+    id: 'kickit',
     name: 'kickit',
     imageWidth: 800,
     screenshots: [
@@ -229,6 +263,7 @@ export const projects = [
     tech: ['Geofencing', 'Google Places/Maps SDK', 'socket.io']
   },
   {
+    id: 'revie',
     name: 'Food revie',
     screenshots: [
       'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b8c614f4-ca86-4efc-8898-c7d26fc25e5e/food-revie-1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T082146Z&X-Amz-Expires=86400&X-Amz-Signature=5ea9d76a16c6f615b1beb86a2760cbc246f9a4de5c3edde25111ff7e29521db4&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22food-revie-1.png%22&x-id=GetObject',
