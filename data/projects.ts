@@ -27,7 +27,23 @@ export const projects = [
     ],
     tech: ['Next.js', 'IndexedDB', 'Prisma', 'PostgreSQL']
   },
-
+  {
+    name: 'Acamp',
+    screenshots: [
+      'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/265565d0-5dbe-4c09-8eeb-f9837a795d77/acamp-1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T101004Z&X-Amz-Expires=86400&X-Amz-Signature=534510e33f076b9a0f27247f6bd357522cc7c7572c03ace8f653f73c0ba970fe&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22acamp-1.PNG.png%22&x-id=GetObject',
+      'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f7cfbb39-5e1e-4bf0-8196-64f1ceea01e1/acamp-2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T101007Z&X-Amz-Expires=86400&X-Amz-Signature=e4dd512a1e8ca46d837ff4cb303e0ced2a43aab2192c5873d104ec83aa5baaeb&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22acamp-2.PNG.png%22&x-id=GetObject',
+      'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/91845997-8909-4d06-bd36-a0b8c09b06a5/acamp-3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T101012Z&X-Amz-Expires=86400&X-Amz-Signature=150da43d7a300408bee8b8c29c1cefbe5199caa7dd4c20696218ebd7cab8cf83&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22acamp-3.PNG.png%22&x-id=GetObject',
+      'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/79970659-67dc-44c7-85e5-347d39fda010/acamp-4.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T101017Z&X-Amz-Expires=86400&X-Amz-Signature=e861b9422c31f3758fe41d45ec240985abc950dd7ecb649c952246dfa9d8ea66&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22acamp-4.PNG.png%22&x-id=GetObject',
+      'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b799e639-f754-45c5-8f11-b6038f85e6a6/acamp-5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T101020Z&X-Amz-Expires=86400&X-Amz-Signature=2c79aefa8eba10f2b7b62ce4bfc61626736db4f6063c96ae73591aed3042e903&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22acamp-5.PNG.png%22&x-id=GetObject'
+    ],
+    details: [
+      'Migrated Apple Maps to Google Maps.',
+      'Added Apple Pay to easier book a camp.',
+      'Used Realm as a local database to offline support and faster load.',
+      'Added flagging feature and switching environment for better testing and delivering. '
+    ],
+    tech: ['Google Maps', 'Apple Pay', 'Realm', 'Snapkit']
+  },
   {
     name: 'Worx360',
     screenshots: [
