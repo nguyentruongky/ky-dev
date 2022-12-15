@@ -16,7 +16,7 @@ export const projects = [
   },
   {
     name: 'Baucu',
-    imageWidth: 350,
+    imageWidth: 300,
     screenshots: [
       'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a2e55a7f-b43d-4bae-b8ab-674e76baebb5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221215T014554Z&X-Amz-Expires=86400&X-Amz-Signature=034ec8089bea5f4477dd0959f3017aa889f2de26a9e971ef688fa3cd8e88f3ed&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject'
     ],
