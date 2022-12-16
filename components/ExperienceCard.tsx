@@ -13,7 +13,6 @@ type Props = {
 }
 
 export default function ExperienceCard(props: Props) {
-  console.log(props.companyName, props.contentOnRight)
   return (
     <div
       className={`flex mb-8 lg:mb-10 max-w-7xl flex-col
