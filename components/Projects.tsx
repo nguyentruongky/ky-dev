@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import SectionHeader from './SectionHeader'
@@ -61,7 +62,19 @@ const ProjectCard = (prop: Project) => {
       </div>
 
       <div className='px-0 md:px-10 max-w-6xl w-full'>
-        <div className='text-xl md:text-3xl font-bold'>{prop.name}</div>
+        <div className='text-xl md:text-3xl font-bold flex flex-row items-center'>
+          {prop.name}
+          {prop.appstoreUrl && (
+            <a
+              href={prop.appstoreUrl}
+              target='_blank'
+              rel='noreferrer'
+              className='ml-4'
+            >
+              <img src='/images/appstore.png' width={28} height={28} />
+            </a>
+          )}
+        </div>
 
         <div className='flex flex-row items-start overflow-x-scroll mt-2 flex-nowrap md:flex-wrap scrollbar-none justify-start'>
           {(prop.tech ?? []).map(tech => (

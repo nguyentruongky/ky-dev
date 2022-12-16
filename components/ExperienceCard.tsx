@@ -1,22 +1,14 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Company } from '../@types/Company'
 
-type Props = {
-  contentOnRight: boolean
-  iconUrl: string
-  roundedIcon: boolean
-  companyName: string
-  title: string
-  screenshots: string[]
-  summary: string[]
-}
-
-export default function ExperienceCard(props: Props) {
+export default function ExperienceCard(props: Company) {
   return (
     <div
       className={`flex mb-8 lg:mb-10 max-w-7xl flex-col
-       md:flex-row rounded-2xl bg-[#292929] p-5 md:p-10 cursor-pointer transition-opacity duration-200 mx-8 lg:mx-10 overflow-y-scroll snap-y snap-mandatory`}
+       md:flex-row rounded-2xl bg-[#292929] p-5 md:p-10 transition-opacity duration-200 mx-8 lg:mx-10 overflow-y-scroll snap-y snap-mandatory`}
     >
       <Left {...props} />
       <div className='w-8' />
@@ -25,7 +17,7 @@ export default function ExperienceCard(props: Props) {
   )
 }
 
-const Left = (props: Props) => {
+const Left = (props: Company) => {
   return (
     <motion.div
       initial={{
@@ -53,21 +45,47 @@ const Left = (props: Props) => {
         <h4 className='text-2xl md:text-3xl font-semibold text-center md:text-left'>
           {props.title}
         </h4>
-        <p className='font-bold text-xl md:text-2xl mt-1 text-white/50 text-center md:text-left'>
-          {props.companyName}
-        </p>
+
+        <div className='flex flex-row items-center'>
+          <p className='font-bold text-xl md:text-2xl mt-1 text-white/50 text-center md:text-left mr-4'>
+            {props.companyName}
+          </p>
+          {props.appstoreUrl && (
+            <a
+              href={props.appstoreUrl}
+              target='_blank'
+              rel='noreferrer'
+              className='underline'
+            >
+              <img src='/images/appstore.png' width={28} height={28} />
+            </a>
+          )}
+        </div>
 
         <ul className='list-disc space-y-4 ml-5 text-lg mt-4'>
           {(props.summary ?? []).map(item => (
             <li key={item}>{item}</li>
           ))}
+
+          {props.demoUrl && (
+            <li>
+              <a
+                href={props.demoUrl}
+                target='_blank'
+                rel='noreferrer'
+                className='underline'
+              >
+                View demo
+              </a>
+            </li>
+          )}
         </ul>
       </div>
     </motion.div>
   )
 }
 
-const Right = (props: Props) => {
+const Right = (props: Company) => {
   return (
     <motion.div
       initial={{

@@ -1,23 +1,7 @@
+import { Company } from '../@types/Company'
 import { icons } from '../common'
 
-export const companies = [
-  {
-    iconUrl: icons.ever,
-    roundedIcon: false,
-    companyName: 'Ever.ca',
-    title: 'Software Engineer',
-    screenshots: [
-      '/images/ever-1.png',
-      '/images/ever-2.png',
-      '/images/ever-3.png',
-      '/images/ever-4.png'
-    ],
-    summary: [
-      'Developed deposit and withdrawal with Plaid and VoPay.',
-      'Added flagging feature to toggle features on/off.',
-      'Built with React Native (Expo), Nest.js, PostgreSQL, TypeScript, NativeBase, Recoil and Sentry.'
-    ]
-  },
+export const companies: Company[] = [
   {
     iconUrl: icons.alongside,
     roundedIcon: true,
@@ -42,8 +26,9 @@ export const companies = [
     companyName: 'TokyoCatch',
     title: 'Senior Mobile Engineer',
     summary: [
-      'Increased to 10.000 play times a day and earned $250.000 every month.',
-      'Achieved crash-free statistics 99% on iOS, 98.73% on Android.'
+      'Built a stable video streaming game using socket.io, GraphQL, and JSMpeg that gains 10.000 play times a day, earning $250.000 every month.',
+      'Reduced the failure rate to 22% by analyzing the statistics and evaluating the efficiency of GraphQL subscription, and improving the product by changing to socket.io.',
+      'Achieved crash-free statistics of 99% on iOS and 98.73% on Android by tracking crashes with Sentry, Firebase Crashlytics.'
     ],
     screenshots: [
       '/images/tokyocatch-1.jpg',
@@ -52,7 +37,10 @@ export const companies = [
       '/images/tokyocatch-4.jpg',
       '/images/tokyocatch-5.jpg',
       '/images/tokyocatch-6.jpg'
-    ]
+    ],
+    demoUrl: 'https://youtu.be/yfaVSPaiaDQ',
+    appstoreUrl:
+      'https://apps.apple.com/us/app/tokyocatch-claw-machine/id1485188384'
   },
   {
     iconUrl: icons.doNotPay,
@@ -87,7 +75,10 @@ export const companies = [
       '/images/coinhako-3.png',
       '/images/coinhako-2.png',
       '/images/coinhako-1.png'
-    ]
+    ],
+    demoUrl: 'https://youtu.be/WnMlVS-riZc',
+    appstoreUrl:
+      'https://apps.apple.com/us/app/coinhako-bitcoin-wallet-asia/id1137855704?l=en'
   },
   {
     iconUrl: icons.moca,

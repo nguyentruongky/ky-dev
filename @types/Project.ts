@@ -7,4 +7,5 @@ export type Project = {
   imageWidth?: number
   tech: string[]
   demoUrl?: string
+  appstoreUrl?: string
 }

@@ -45,7 +45,8 @@ export const projects: Project[] = [
       'Used Realm as a local database to offline support and faster load.',
       'Developed flagging feature and switching environment for better testing and delivering.'
     ],
-    tech: ['Google Maps', 'Apple Pay', 'Realm', 'Snapkit']
+    tech: ['Google Maps', 'Apple Pay', 'Realm', 'Snapkit'],
+    appstoreUrl: 'https://apps.apple.com/se/app/id1523868447'
   },
   {
     id: 'worx360',
@@ -72,7 +73,8 @@ export const projects: Project[] = [
       'Checkr',
       'Mailchimp',
       'socket.io'
-    ]
+    ],
+    appstoreUrl: 'https://apps.apple.com/se/app/worx360/id6444571359?l=en'
   },
   {
     id: 'infinidus',
@@ -107,7 +109,9 @@ export const projects: Project[] = [
       'Persistence with Realm for offline support.',
       'Built UI programmatically with Snapkit'
     ],
-    tech: ['Firebase', 'Snapkit', 'Realm']
+    tech: ['Firebase', 'Snapkit', 'Realm'],
+    appstoreUrl:
+      'https://apps.apple.com/se/app/done-happy-productivity/id1058049013?l=en'
   },
   {
     id: 'groovetime',
@@ -119,7 +123,9 @@ export const projects: Project[] = [
       'Implement Moonpay on iOS and backend for on-ramp progress.',
       'Show and bid video NFTs in app.'
     ],
-    tech: ['SwiftUI', 'Moonpay', 'Java', 'Web3Auth']
+    tech: ['SwiftUI', 'Moonpay', 'Java', 'Web3Auth'],
+    appstoreUrl:
+      'https://apps.apple.com/us/app/groovetime-home-dance-studio/id1506502185'
   },
   {
     id: 'neuroid',
@@ -206,11 +212,11 @@ export const projects: Project[] = [
       '/images/drips-4.png',
       '/images/drips-5.png'
     ],
-    demoUrl: 'https://apps.apple.com/gb/app/snapshop-republic/id1309079895',
     details: [
       'Drips is a fashion marketplace that brings together the best fashion brands and boutiques into one easy and seamless shopping app.'
     ],
-    tech: ['Stripe', 'Swift', 'Auto Layout Programmatically ']
+    tech: ['Stripe', 'Swift', 'Auto Layout Programmatically'],
+    appstoreUrl: 'https://apps.apple.com/gb/app/snapshop-republic/id1309079895'
   },
   {
     id: 'fixir',
@@ -266,5 +272,29 @@ export const projects: Project[] = [
     ],
     details: ['Geofence to show restaurants around.', 'Share review by videos'],
     tech: ['Geofence', 'Google Maps SDK', 'AVFoundation']
+  },
+  {
+    id: 'ever',
+    name: 'Ever.ca',
+    screenshots: [
+      '/images/ever-1.png',
+      '/images/ever-2.png',
+      '/images/ever-3.png',
+      '/images/ever-4.png'
+    ],
+    tech: [
+      'React Native',
+      'Expo',
+      'Nest.js',
+      'PostgreSQL',
+      'TypeScript',
+      'NativeBase',
+      'Recoil',
+      'Sentry'
+    ],
+    details: [
+      'Developed deposit and withdrawal with Plaid and VoPay.',
+      'Added flagging feature for A/B testing.'
+    ]
   }
 ]
