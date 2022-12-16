@@ -8,4 +8,5 @@ export type Project = {
   tech: string[]
   demoUrl?: string
   appstoreUrl?: string
+  githubUrl?: string
 }

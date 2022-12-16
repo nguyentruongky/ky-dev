@@ -17,18 +17,7 @@ export const projects: Project[] = [
     ],
     tech: ['CoreBluetooth', 'CoreLocation', 'GeoFence']
   },
-  {
-    id: 'baucu',
-    name: 'Baucu',
-    imageWidth: 300,
-    screenshots: ['/images/baucu.png'],
-    details: [
-      'Built in 2 days with Next.js, IndexedDB.',
-      'Saved manual works up to 35 minutes.',
-      'Exported data to Excel for report and printing.'
-    ],
-    tech: ['Next.js', 'IndexedDB', 'Prisma', 'PostgreSQL']
-  },
+
   {
     id: 'acamp',
     name: 'Acamp',
@@ -75,6 +64,18 @@ export const projects: Project[] = [
       'socket.io'
     ],
     appstoreUrl: 'https://apps.apple.com/se/app/worx360/id6444571359?l=en'
+  },
+  {
+    id: 'baucu',
+    name: 'Baucu',
+    imageWidth: 300,
+    screenshots: ['/images/baucu.png'],
+    details: [
+      'Built in 2 days with Next.js, IndexedDB.',
+      'Saved manual works up to 35 minutes.',
+      'Exported data to Excel for report and printing.'
+    ],
+    tech: ['Next.js', 'IndexedDB', 'Prisma', 'PostgreSQL']
   },
   {
     id: 'infinidus',
@@ -126,6 +127,15 @@ export const projects: Project[] = [
     tech: ['SwiftUI', 'Moonpay', 'Java', 'Web3Auth'],
     appstoreUrl:
       'https://apps.apple.com/us/app/groovetime-home-dance-studio/id1506502185'
+  },
+  {
+    id: 'knconstraints',
+    name: 'KNConstraints',
+    imageWidth: 100,
+    details: ['Short syntax', 'Easily and quickly understand'],
+    screenshots: ['./images/github.png'],
+    tech: [],
+    githubUrl: 'https://github.com/nguyentruongky/KNConstraints'
   },
   {
     id: 'neuroid',

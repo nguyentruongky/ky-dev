@@ -74,6 +74,20 @@ const ProjectCard = (prop: Project) => {
               <img src='/images/appstore.png' width={28} height={28} />
             </a>
           )}
+          {prop.githubUrl && (
+            <a
+              href={prop.githubUrl}
+              target='_blank'
+              rel='noreferrer'
+              className='ml-4'
+            >
+              <img
+                src='/images/github.png'
+                className='aspect-square'
+                width={28}
+              />
+            </a>
+          )}
         </div>
 
         <div className='flex flex-row items-start overflow-x-scroll mt-2 flex-nowrap md:flex-wrap scrollbar-none justify-start'>
