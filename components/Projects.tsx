@@ -96,7 +96,7 @@ const ProjectCard = (prop: Project) => {
           ))}
         </div>
 
-        <p className='text-lg text-center md:text-left mt-4'>
+        <div className='text-lg text-center md:text-left mt-4'>
           <ul className='list-disc space-y-4 ml-5 text-md md:text-xl text-left'>
             {(prop.details ?? []).map(item => (
               <li key={item}>{item}</li>
@@ -115,7 +115,7 @@ const ProjectCard = (prop: Project) => {
               </li>
             )}
           </ul>
-        </p>
+        </div>
       </div>
     </div>
   )

@@ -34,7 +34,7 @@ export const projects: Project[] = [
       'Used Realm as a local database to offline support and faster load.',
       'Developed flagging feature and switching environment for better testing and delivering.'
     ],
-    tech: ['Google Maps', 'Apple Pay', 'Realm', 'Snapkit'],
+    tech: ['Google Maps', 'Apple Pay', 'Realm', 'SnapKit'],
     appstoreUrl: 'https://apps.apple.com/se/app/id1523868447'
   },
   {
@@ -108,9 +108,9 @@ export const projects: Project[] = [
     details: [
       'Authenticated with Firebase',
       'Persistence with Realm for offline support.',
-      'Built UI programmatically with Snapkit'
+      'Built UI programmatically with SnapKit'
     ],
-    tech: ['Firebase', 'Snapkit', 'Realm'],
+    tech: ['Firebase', 'SnapKit', 'Realm'],
     appstoreUrl:
       'https://apps.apple.com/se/app/done-happy-productivity/id1058049013?l=en'
   },
@@ -120,8 +120,8 @@ export const projects: Project[] = [
     imageWidth: 800,
     screenshots: ['/images/groovetime.png'],
     details: [
-      'Simply create Solana wallet with social login.',
-      'Implement Moonpay on iOS and backend for on-ramp progress.',
+      'Simply create Solana wallets with social login methods.',
+      'Implement Moonpay on iOS and backend for on-ramp process.',
       'Show and bid video NFTs in app.'
     ],
     tech: ['SwiftUI', 'Moonpay', 'Java', 'Web3Auth'],
@@ -131,9 +131,13 @@ export const projects: Project[] = [
   {
     id: 'knconstraints',
     name: 'KNConstraints',
-    imageWidth: 100,
-    details: ['Short syntax', 'Easily and quickly understand'],
-    screenshots: ['./images/github.png'],
+    imageWidth: 300,
+    details: [
+      'Short and sweet syntax',
+      'Easy to understand and maintain',
+      'Used in some commercial projects like Coinhako, TokyoCatch...'
+    ],
+    screenshots: ['./images/knconstraints-1.png'],
     tech: [],
     githubUrl: 'https://github.com/nguyentruongky/KNConstraints'
   },
@@ -144,7 +148,7 @@ export const projects: Project[] = [
     screenshots: ['/images/neuroid.png'],
     details: [
       'A Human Analytics SDK silently capture user behaviors.',
-      'Developer friendly, only one line to setup.'
+      'Developer friendly.'
     ],
     tech: ['Observation pattern', 'Method swizzling', 'SQLCipher', 'SQLite']
   },
@@ -209,8 +213,18 @@ export const projects: Project[] = [
       '/images/opiyn-2.jpg',
       '/images/opiyn-3.jpg'
     ],
-    details: ['Opiyn a mobile interactive reviewing social network.'],
-    tech: ['Firebase', 'Geofencing', 'Google Maps SDK', 'Google Places SDK']
+    details: [
+      'Opiyn a mobile interactive reviewing social network.',
+      'Displayed heavily format text with multi fonts, sizes and styles.',
+      'Showed reviews on in-app Google Maps with performance enhancement.'
+    ],
+    tech: [
+      'TextKit',
+      'Firebase',
+      'Geofence',
+      'Google Maps SDK',
+      'Google Places SDK'
+    ]
   },
   {
     id: 'drips',
@@ -223,7 +237,8 @@ export const projects: Project[] = [
       '/images/drips-5.png'
     ],
     details: [
-      'Drips is a fashion marketplace that brings together the best fashion brands and boutiques into one easy and seamless shopping app.'
+      'Drips is a fashion marketplace that brings together the best fashion brands and boutiques into one easy and seamless shopping app.',
+      'Developed UI programmatically with KNConstraints.'
     ],
     tech: ['Stripe', 'Swift', 'Auto Layout Programmatically'],
     appstoreUrl: 'https://apps.apple.com/gb/app/snapshop-republic/id1309079895'
@@ -251,7 +266,11 @@ export const projects: Project[] = [
     name: 'Streamy',
     imageWidth: 100,
     screenshots: ['/images/streamy.png'],
-    details: ['Streamy is a ticket marketplace and streaming app.'],
+    details: [
+      'Streamy is a ticket marketplace and streaming app.',
+      "Live stream the event directly on the user's Facebook personal page or group.",
+      'Live stream in the platform with Wowza Streaming Engine.'
+    ],
     tech: [
       'Facebook Live API',
       'Wowza Streaming Cloud SDK',
@@ -265,10 +284,10 @@ export const projects: Project[] = [
     imageWidth: 800,
     screenshots: ['/images/kickit.png'],
     details: [
-      'Hang out with your friends without the hassle of making plans',
-      'Group calendar, group chat'
+      'Geofence to detect friends nearby.',
+      'Keep friends on the same pages with group calendars and group chats.'
     ],
-    tech: ['Geofencing', 'Google Places/Maps SDK', 'socket.io']
+    tech: ['Geofencing', 'Google Places/Maps SDK', 'socket.io', 'SnapKit']
   },
   {
     id: 'revie',
