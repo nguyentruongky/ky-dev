@@ -34,7 +34,14 @@ export const projects: Project[] = [
       'Used Realm as a local database to offline support and faster load.',
       'Developed flagging feature and switching environment for better testing and delivering.'
     ],
-    tech: ['Google Maps', 'Apple Pay', 'Realm', 'SnapKit'],
+    tech: [
+      'Google Maps',
+      'Apple Pay',
+      'Realm',
+      'SnapKit',
+      'Google Translate',
+      'Swiftgen'
+    ],
     appstoreUrl: 'https://apps.apple.com/se/app/id1523868447'
   },
   {
@@ -127,6 +134,24 @@ export const projects: Project[] = [
     tech: ['SwiftUI', 'Moonpay', 'Java', 'Web3Auth'],
     appstoreUrl:
       'https://apps.apple.com/us/app/groovetime-home-dance-studio/id1506502185'
+  },
+  {
+    id: 'jet',
+    name: 'Jet',
+    screenshots: [
+      '/images/jet-1.png',
+      '/images/jet-2.png',
+      '/images/jet-3.png',
+      '/images/jet-4.png',
+      '/images/jet-5.png',
+      '/images/jet-6.png'
+    ],
+    details: [
+      'On-ramp and off-ramp users with MoonPay',
+      'Managed states with Redux.',
+      'UI built with NativeBase for multi screen adaption'
+    ],
+    tech: ['React Native', 'MoonPay', 'Redux', 'NativeBase', 'Charts']
   },
   {
     id: 'knconstraints',
@@ -285,9 +310,10 @@ export const projects: Project[] = [
     screenshots: ['/images/kickit.png'],
     details: [
       'Geofence to detect friends nearby.',
+      'Heavily customize Google Map Pin to display complex states.',
       'Keep friends on the same pages with group calendars and group chats.'
     ],
-    tech: ['Geofencing', 'Google Places/Maps SDK', 'socket.io', 'SnapKit']
+    tech: ['Geofencing', 'Google Places', 'Google Maps', 'socket.io', 'SnapKit']
   },
   {
     id: 'revie',
