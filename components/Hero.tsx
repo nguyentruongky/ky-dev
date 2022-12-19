@@ -14,7 +14,7 @@ function Hero({}: Props) {
     delaySpeed: 2000
   })
   return (
-    <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
+    <div className='h-[75vh] md:h-[85vh] flex flex-col space-y-8 text-center overflow-hidden items-center justify-center'>
       <BackgroundCircle />
       <img
         className='relative rounded-full h-32 w-32 mx-auto object-cover'
@@ -22,10 +22,10 @@ function Hero({}: Props) {
         alt=''
       />
       <div className='z-20'>
-        <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[7px] md:tracking-[15px]'>
+        <h2 className='text-sm uppercase text-gray-500 py-2 tracking-[7px] md:tracking-[15px]'>
           Software Engineer
         </h2>
-        <h1 className='text-xl md:text-5xl lg:text-6xl font-semibold scroll-px-10 text-gray-50/60'>
+        <h1 className='text-xl md:text-5xl lg:text-6xl font-semibold scroll-px-10 text-gray-50/60 '>
           I'm Ky Nguyen, <span className='underline text-white'>{text}</span>{' '}
           developer
         </h1>
