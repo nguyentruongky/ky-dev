@@ -15,6 +15,7 @@ export const projects: Project[] = [
       'Geofence to detect doors and unlock by swiping.',
       'Tap the phone to the reader to unlock.'
     ],
+    appstoreUrl: 'https://apps.apple.com/us/app/general-provision/id6444879814',
     tech: ['CoreBluetooth', 'CoreLocation', 'GeoFence']
   },
 
