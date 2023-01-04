@@ -2,8 +2,8 @@ import { Project } from '../@types/Project'
 
 export const projects: Project[] = [
   {
-    id: 'verkly',
-    name: 'Verkly',
+    id: 'gp',
+    name: 'General Provision',
     screenshots: [
       '/images/verkly-1.png',
       '/images/verkly-2.png',
