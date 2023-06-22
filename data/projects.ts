@@ -26,9 +26,9 @@ export const projects: Project[] = [
       'PostgreSQL',
       'TypeORM',
       'Heroku'
-    ]
+    ],
+    tags: ['All', 'iOS', 'Full-stack']
   },
-
   {
     id: 'acamp',
     name: 'Acamp',
@@ -53,7 +53,8 @@ export const projects: Project[] = [
       'Google Translate',
       'Swiftgen'
     ],
-    appstoreUrl: 'https://apps.apple.com/se/app/id1523868447'
+    appstoreUrl: 'https://apps.apple.com/se/app/id1523868447',
+    tags: ['All', 'iOS']
   },
   {
     id: 'worx360',
@@ -81,6 +82,7 @@ export const projects: Project[] = [
       'Mailchimp',
       'socket.io'
     ],
+    tags: ['All', 'iOS', 'Full-stack'],
     appstoreUrl: 'https://apps.apple.com/se/app/worx360/id6444571359?l=en'
   },
   {
@@ -95,6 +97,7 @@ export const projects: Project[] = [
       'Saved manual works up to 35 minutes.',
       'Exported data to Excel for report and printing.'
     ],
+    tags: ['All', 'Full-stack'],
     tech: ['Next.js', 'IndexedDB', 'Prisma', 'PostgreSQL']
   },
   {
@@ -121,6 +124,7 @@ export const projects: Project[] = [
       'Apple Pay',
       'Google Pay'
     ],
+    tags: ['All', 'React Native', 'Full-stack'],
     appstoreUrl: 'https://apps.apple.com/app/hot-meal/id6449185803'
   },
   {
@@ -139,6 +143,7 @@ export const projects: Project[] = [
       'Mentored and supported 2 iOS developers in building complicated features. Managed and assigned tasks to their abilities.',
       'Geofence to display message at the correct location.'
     ],
+    tags: ['All', 'iOS', 'Full-stack'],
     tech: ['Nest.js', 'Prisma', 'PostgreSQL', 'AWS', 'Twilio']
   },
   {
@@ -149,6 +154,7 @@ export const projects: Project[] = [
       'Helped 600.000 users solve their problems with a smart chatbot and friendly user experience.'
     ],
     tech: ['Swift', 'Firebase', 'Go'],
+    tags: ['All', 'iOS', 'Full-stack'],
     screenshots: [
       'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/donotpay-4.png',
       'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/donotpay-3.png',
@@ -172,6 +178,7 @@ export const projects: Project[] = [
       'Built UI programmatically with SnapKit'
     ],
     tech: ['Firebase', 'SnapKit', 'Realm'],
+    tags: ['All', 'iOS'],
     appstoreUrl:
       'https://apps.apple.com/se/app/done-happy-productivity/id1058049013?l=en'
   },
@@ -188,6 +195,7 @@ export const projects: Project[] = [
       'Show and bid video NFTs in app.'
     ],
     tech: ['SwiftUI', 'Moonpay', 'Java', 'Web3Auth'],
+    tags: ['All', 'iOS', 'Full-stack'],
     appstoreUrl:
       'https://apps.apple.com/us/app/groovetime-home-dance-studio/id1506502185'
   },
@@ -207,6 +215,7 @@ export const projects: Project[] = [
       'Managed states with Redux.',
       'UI built with NativeBase for multi screen adaption'
     ],
+    tags: ['All', 'React Native', 'Full-stack'],
     tech: ['React Native', 'MoonPay', 'Redux', 'NativeBase', 'Charts']
   },
   {
@@ -222,6 +231,7 @@ export const projects: Project[] = [
       '.https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/knconstraints-1.png'
     ],
     tech: [],
+    tags: ['All'],
     githubUrl: 'https://github.com/nguyentruongky/KNConstraints'
   },
   {
@@ -235,6 +245,7 @@ export const projects: Project[] = [
       'A Human Analytics SDK silently capture user behaviors.',
       'Developer friendly.'
     ],
+    tags: ['All', 'iOS'],
     tech: ['Observation pattern', 'Method swizzling', 'SQLCipher', 'SQLite']
   },
   {
@@ -250,6 +261,7 @@ export const projects: Project[] = [
       'Add music, voice over to the recorded video.',
       'Trim the video, add watermark.'
     ],
+    tags: ['All', 'iOS'],
     tech: ['AVFoundation', 'ffmpeg'],
     demoUrl: 'https://youtu.be/LzOH53MIQA8'
   },
@@ -268,6 +280,7 @@ export const projects: Project[] = [
       'Ogenii is a platform to connect teachers and learners. ',
       'Founded and established the team from scratch.'
     ],
+    tags: ['All', 'iOS', 'Full-stack'],
     tech: [
       'Node.js',
       'MySQL',
@@ -289,6 +302,7 @@ export const projects: Project[] = [
     details: [
       'WebGaff is an Ireland based mobile and online real estate and rental marketplace, focused on providing real-time data and analytics to potential customers about properties of interest.'
     ],
+    tags: ['All', 'iOS'],
     demoUrl: 'https://youtu.be/03fy9G_FKhk',
     tech: ['Storyboard', 'CoreLocation', 'Google Maps SDK']
   },
@@ -305,6 +319,7 @@ export const projects: Project[] = [
       'Displayed heavily format text with multi fonts, sizes and styles.',
       'Showed reviews on in-app Google Maps with performance enhancement.'
     ],
+    tags: ['All', 'iOS'],
     tech: [
       'TextKit',
       'Firebase',
@@ -327,6 +342,7 @@ export const projects: Project[] = [
       'Drips is a fashion marketplace that brings together the best fashion brands and boutiques into one easy and seamless shopping app.',
       'Developed UI programmatically with KNConstraints.'
     ],
+    tags: ['All', 'iOS'],
     tech: ['Stripe', 'Swift', 'Auto Layout Programmatically'],
     appstoreUrl: 'https://apps.apple.com/gb/app/snapshop-republic/id1309079895'
   },
@@ -342,6 +358,7 @@ export const projects: Project[] = [
       'Eliminate 100% manual progress by building chat system between drivers and workshops.',
       'Clear dependencies between frontend and backend by designing unique data for every API.'
     ],
+    tags: ['All', 'iOS'],
     tech: [
       'VIP architecture pattern',
       'FCM',
@@ -362,6 +379,7 @@ export const projects: Project[] = [
       "Live stream the event directly on the user's Facebook personal page or group.",
       'Live stream in the platform with Wowza Streaming Engine.'
     ],
+    tags: ['All', 'iOS'],
     tech: [
       'Facebook Live API',
       'Wowza Streaming Cloud SDK',
@@ -381,6 +399,7 @@ export const projects: Project[] = [
       'Heavily customize Google Map Pin to display complex states.',
       'Keep friends on the same pages with group calendars and group chats.'
     ],
+    tags: ['All', 'iOS'],
     tech: ['Geofencing', 'Google Places', 'Google Maps', 'socket.io', 'SnapKit']
   },
   {
@@ -393,6 +412,7 @@ export const projects: Project[] = [
       'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/food-revie-4.png',
       'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/food-revie-5.png'
     ],
+    tags: ['All', 'iOS'],
     details: ['Geofence to show restaurants around.', 'Share review by videos'],
     tech: ['Geofence', 'Google Maps SDK', 'AVFoundation']
   },
@@ -415,6 +435,7 @@ export const projects: Project[] = [
       'Recoil',
       'Sentry'
     ],
+    tags: ['All', 'iOS', 'React Native', 'Full-stack'],
     details: [
       'Developed deposit and withdrawal with Plaid and VoPay.',
       'Added flagging feature for A/B testing.'

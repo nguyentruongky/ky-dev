@@ -42,9 +42,10 @@ const LeftView = () => {
         bgColor='transparent'
       />
       <a
-        href='/assets/Ky Nguyen - Full-Stack Engineer.pdf'
+        href='/assets/KyNguyen-FullStackEngineer.pdf'
         target='_blank'
         rel='noopener noreferrer'
+        className='ml-4'
       >
         <img
           src='https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/download.png'

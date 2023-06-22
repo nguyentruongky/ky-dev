@@ -1,10 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import Head from 'next/head'
-import Header from '../components/Header'
-import Hero from '../components/Hero'
-import About from '../components/About'
-import WorkExperience from '../components/WorkExperience'
-import Projects from '../components/Projects'
+import Head from 'next/head';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import WorkExperience from '../components/WorkExperience';
+import Projects, { ProjectFilter } from '../components/Projects';
+import SectionHeader from '../components/SectionHeader';
 
 export default function Home() {
   return (
@@ -31,5 +32,5 @@ export default function Home() {
         <Projects />
       </section>
     </div>
-  )
+  );
 }

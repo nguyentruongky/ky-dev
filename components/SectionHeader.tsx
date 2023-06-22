@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-type Props = { title: string }
-
-export default function SectionHeader({ title }: Props) {
+export default function SectionHeader(props: {
+  title: string;
+  subView?: JSX.Element;
+}) {
   return (
-    <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
-      {title}
-    </h3>
-  )
+    <div className='absolute top-24 z-50	'>
+      <h3 className='font-bold uppercase tracking-[20px] text-gray-500 text-2xl text-center'>
+        {props.title}
+      </h3>
+      {props.subView}
+    </div>
+  );
 }

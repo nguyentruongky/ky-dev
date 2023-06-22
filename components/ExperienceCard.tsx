@@ -42,7 +42,7 @@ const Left = (props: Company) => {
     >
       <div className='w-28 h-28 rounded-full md:rounded-full xl:w-[100px] xl:h-[100px] justify-center items-center flex self-center md:self-start'>
         <img
-          className={`object-contain object-center mx-10 ${
+          className={`object-contain object-center mx-10  ${
             props.roundedIcon ? 'rounded-full' : ''
           }`}
           src={props.iconUrl}
