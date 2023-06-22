@@ -1,33 +1,43 @@
-import { Project } from '../@types/Project'
+import { Project } from '../@types/Project';
 
 export const projects: Project[] = [
   {
     id: 'gp',
     name: 'General Provision',
     screenshots: [
-      '/images/verkly-1.png',
-      '/images/verkly-2.png',
-      '/images/verkly-3.png',
-      '/images/verkly-4.png',
-      '/images/verkly-5.png'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/verkly-1.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/verkly-2.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/verkly-3.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/verkly-4.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/verkly-5.png'
     ],
     details: [
       'Geofence to detect doors and unlock by swiping.',
-      'Tap the phone to the reader to unlock.'
+      'Tap the phone to the reader to unlock.',
+      'Book meeting rooms, order coffee to table, purchase event tickets'
     ],
     appstoreUrl: 'https://apps.apple.com/us/app/general-provision/id6444879814',
-    tech: ['CoreBluetooth', 'CoreLocation', 'GeoFence']
+    tech: [
+      'Swift',
+      'CoreBluetooth',
+      'CoreLocation',
+      'GeoFence',
+      'Node.js',
+      'PostgreSQL',
+      'TypeORM',
+      'Heroku'
+    ]
   },
 
   {
     id: 'acamp',
     name: 'Acamp',
     screenshots: [
-      '/images/acamp-1.png',
-      '/images/acamp-2.png',
-      '/images/acamp-3.png',
-      '/images/acamp-4.png',
-      '/images/acamp-5.png'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/acamp-1.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/acamp-2.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/acamp-3.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/acamp-4.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/acamp-5.png'
     ],
     details: [
       'Brought more conveniences for booking by adding Apple Pay.',
@@ -49,12 +59,12 @@ export const projects: Project[] = [
     id: 'worx360',
     name: 'Worx360',
     screenshots: [
-      '/images/worx360-1.png',
-      '/images/worx360-2.png',
-      '/images/worx360-3.png',
-      '/images/worx360-4.png',
-      '/images/worx360-5.png',
-      '/images/worx360-6.png'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/worx360-1.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/worx360-2.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/worx360-3.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/worx360-4.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/worx360-5.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/worx360-6.png'
     ],
     details: [
       'Fully supported from A to Z employer and talent recruitment functions with internal chat with socket.io, payment system with Stripe, and time management.',
@@ -77,7 +87,9 @@ export const projects: Project[] = [
     id: 'baucu',
     name: 'Baucu',
     imageWidth: 300,
-    screenshots: ['/images/baucu.png'],
+    screenshots: [
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/baucu.png'
+    ],
     details: [
       'Built in 2 days with Next.js, IndexedDB.',
       'Saved manual works up to 35 minutes.',
@@ -86,16 +98,42 @@ export const projects: Project[] = [
     tech: ['Next.js', 'IndexedDB', 'Prisma', 'PostgreSQL']
   },
   {
+    id: 'hotmeal',
+    name: 'Hot Meal Challenge',
+    screenshots: [
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/hotmeal-1.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/hotmeal-2.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/hotmeal-3.png'
+    ],
+    details: [
+      'Designed and developed a meticulously crafted iOS and Android application aimed at providing hot meals to individuals in need in London, leading to an impressive 194 donated meals within just 2 days of its launch. ',
+      'Implemented seamless payment experiences by integrating Apple Pay and Google Pay through Stripe, enhancing convenience and user satisfaction.'
+    ],
+    tech: [
+      'React Native',
+      'Realm',
+      'NativeBase',
+      'Nest.js',
+      'Supabase',
+      'Firebase',
+      'Heroku',
+      'Stripe',
+      'Apple Pay',
+      'Google Pay'
+    ],
+    appstoreUrl: 'https://apps.apple.com/app/hot-meal/id6449185803'
+  },
+  {
     id: 'infinidus',
     name: 'Infinidus',
     screenshots: [
-      '/images/infinidus-1.png',
-      '/images/infinidus-2.png',
-      '/images/infinidus-3.png',
-      '/images/infinidus-4.png',
-      '/images/infinidus-5.png',
-      '/images/infinidus-6.png',
-      '/images/infinidus-7.png'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/infinidus-1.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/infinidus-2.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/infinidus-3.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/infinidus-4.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/infinidus-5.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/infinidus-6.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/infinidus-7.png'
     ],
     details: [
       'Mentored and supported 2 iOS developers in building complicated features. Managed and assigned tasks to their abilities.',
@@ -104,14 +142,29 @@ export const projects: Project[] = [
     tech: ['Nest.js', 'Prisma', 'PostgreSQL', 'AWS', 'Twilio']
   },
   {
+    id: 'donotpay',
+    name: 'DoNotPay',
+    details: [
+      '60% screens are configurable from server.',
+      'Helped 600.000 users solve their problems with a smart chatbot and friendly user experience.'
+    ],
+    tech: ['Swift', 'Firebase', 'Go'],
+    screenshots: [
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/donotpay-4.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/donotpay-3.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/donotpay-2.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/donotpay-1.png'
+    ]
+  },
+  {
     id: 'done',
     name: 'Done!',
     screenshots: [
-      '/images/done-1.png',
-      '/images/done-2.png',
-      '/images/done-3.png',
-      '/images/done-4.png',
-      '/images/done-5.png'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/done-1.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/done-2.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/done-3.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/done-4.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/done-5.png'
     ],
     details: [
       'Authenticated with Firebase',
@@ -126,7 +179,9 @@ export const projects: Project[] = [
     id: 'groovetime',
     name: 'Groovetime',
     imageWidth: 800,
-    screenshots: ['/images/groovetime.png'],
+    screenshots: [
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/groovetime.png'
+    ],
     details: [
       'Simply create Solana wallets with social login methods.',
       'Implement Moonpay on iOS and backend for on-ramp process.',
@@ -140,12 +195,12 @@ export const projects: Project[] = [
     id: 'jet',
     name: 'Jet',
     screenshots: [
-      '/images/jet-1.png',
-      '/images/jet-2.png',
-      '/images/jet-3.png',
-      '/images/jet-4.png',
-      '/images/jet-5.png',
-      '/images/jet-6.png'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/jet-1.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/jet-2.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/jet-3.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/jet-4.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/jet-5.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/jet-6.png'
     ],
     details: [
       'On-ramp and off-ramp users with MoonPay',
@@ -163,7 +218,9 @@ export const projects: Project[] = [
       'Easy to understand and maintain',
       'Used in some commercial projects like Coinhako, TokyoCatch...'
     ],
-    screenshots: ['./images/knconstraints-1.png'],
+    screenshots: [
+      '.https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/knconstraints-1.png'
+    ],
     tech: [],
     githubUrl: 'https://github.com/nguyentruongky/KNConstraints'
   },
@@ -171,7 +228,9 @@ export const projects: Project[] = [
     id: 'neuroid',
     name: 'Neuro-ID-SDK',
     imageWidth: 150,
-    screenshots: ['/images/neuroid.png'],
+    screenshots: [
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/neuroid.png'
+    ],
     details: [
       'A Human Analytics SDK silently capture user behaviors.',
       'Developer friendly.'
@@ -183,7 +242,9 @@ export const projects: Project[] = [
     name: 'The social app - Video recorder',
     imageWidth: 150,
     rounded: true,
-    screenshots: ['/images/video-recorder.png'],
+    screenshots: [
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/video-recorder.png'
+    ],
     details: [
       'Record video like Tiktok with the finger pressed/released to record/pause.',
       'Add music, voice over to the recorded video.',
@@ -196,12 +257,12 @@ export const projects: Project[] = [
     id: 'ogenii',
     name: 'Ogenii',
     screenshots: [
-      '/images/ogenii-1.jpg',
-      '/images/ogenii-2.jpg',
-      '/images/ogenii-3.jpg',
-      '/images/ogenii-4.jpg',
-      '/images/ogenii-5.jpg',
-      '/images/ogenii-6.jpg'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/ogenii-1.jpg',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/ogenii-2.jpg',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/ogenii-3.jpg',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/ogenii-4.jpg',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/ogenii-5.jpg',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/ogenii-6.jpg'
     ],
     details: [
       'Ogenii is a platform to connect teachers and learners. ',
@@ -220,10 +281,10 @@ export const projects: Project[] = [
     id: 'webgaff',
     name: 'WebGaff',
     screenshots: [
-      '/images/webgaff-1.jpg',
-      '/images/webgaff-2.jpg',
-      '/images/webgaff-3.jpg',
-      '/images/webgaff-4.jpg'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/webgaff-1.jpg',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/webgaff-2.jpg',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/webgaff-3.jpg',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/webgaff-4.jpg'
     ],
     details: [
       'WebGaff is an Ireland based mobile and online real estate and rental marketplace, focused on providing real-time data and analytics to potential customers about properties of interest.'
@@ -235,9 +296,9 @@ export const projects: Project[] = [
     id: 'opiyn',
     name: 'Opiyn',
     screenshots: [
-      '/images/opiyn-1.jpg',
-      '/images/opiyn-2.jpg',
-      '/images/opiyn-3.jpg'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/opiyn-1.jpg',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/opiyn-2.jpg',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/opiyn-3.jpg'
     ],
     details: [
       'Opiyn a mobile interactive reviewing social network.',
@@ -256,11 +317,11 @@ export const projects: Project[] = [
     id: 'drips',
     name: 'Drips',
     screenshots: [
-      '/images/drips-1.png',
-      '/images/drips-2.png',
-      '/images/drips-3.png',
-      '/images/drips-4.png',
-      '/images/drips-5.png'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/drips-1.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/drips-2.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/drips-3.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/drips-4.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/drips-5.png'
     ],
     details: [
       'Drips is a fashion marketplace that brings together the best fashion brands and boutiques into one easy and seamless shopping app.',
@@ -273,7 +334,9 @@ export const projects: Project[] = [
     id: 'fixir',
     name: 'Fixir',
     imageWidth: 100,
-    screenshots: ['/images/fixir.png'],
+    screenshots: [
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/fixir.png'
+    ],
     details: [
       'Get more requests by using new detail collection system like a step-by-step chat bot.',
       'Eliminate 100% manual progress by building chat system between drivers and workshops.',
@@ -291,7 +354,9 @@ export const projects: Project[] = [
     id: 'streamy',
     name: 'Streamy',
     imageWidth: 100,
-    screenshots: ['/images/streamy.png'],
+    screenshots: [
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/streamy.png'
+    ],
     details: [
       'Streamy is a ticket marketplace and streaming app.',
       "Live stream the event directly on the user's Facebook personal page or group.",
@@ -308,7 +373,9 @@ export const projects: Project[] = [
     id: 'kickit',
     name: 'kickit',
     imageWidth: 800,
-    screenshots: ['/images/kickit.png'],
+    screenshots: [
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/kickit.png'
+    ],
     details: [
       'Geofence to detect friends nearby.',
       'Heavily customize Google Map Pin to display complex states.',
@@ -320,11 +387,11 @@ export const projects: Project[] = [
     id: 'revie',
     name: 'Food revie',
     screenshots: [
-      '/images/food-revie-1.png',
-      '/images/food-revie-2.png',
-      '/images/food-revie-3.png',
-      '/images/food-revie-4.png',
-      '/images/food-revie-5.png'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/food-revie-1.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/food-revie-2.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/food-revie-3.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/food-revie-4.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/food-revie-5.png'
     ],
     details: ['Geofence to show restaurants around.', 'Share review by videos'],
     tech: ['Geofence', 'Google Maps SDK', 'AVFoundation']
@@ -333,10 +400,10 @@ export const projects: Project[] = [
     id: 'ever',
     name: 'Ever.ca',
     screenshots: [
-      '/images/ever-1.png',
-      '/images/ever-2.png',
-      '/images/ever-3.png',
-      '/images/ever-4.png'
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/ever-1.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/ever-2.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/ever-3.png',
+      'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/ever-4.png'
     ],
     tech: [
       'React Native',
@@ -353,4 +420,4 @@ export const projects: Project[] = [
       'Added flagging feature for A/B testing.'
     ]
   }
-]
+];

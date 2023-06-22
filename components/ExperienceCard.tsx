@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Company } from '../@types/Company'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Company } from '../@types/Company';
+import parse from 'html-react-parser';
 
 export default function ExperienceCard(props: Company) {
   return (
@@ -14,10 +15,17 @@ export default function ExperienceCard(props: Company) {
       <div className='w-8' />
       <Right {...props} />
     </div>
-  )
+  );
 }
 
 const Left = (props: Company) => {
+  let summary = props.summary;
+  const bolds = props.boldString ?? [];
+  for (let i = 0; i < bolds.length; i++) {
+    const bold = bolds[i];
+    summary = summary.map(item => item.replaceAll(bold, '<b>' + bold + '</b>'));
+  }
+
   return (
     <motion.div
       initial={{
@@ -57,14 +65,20 @@ const Left = (props: Company) => {
               rel='noreferrer'
               className='underline'
             >
-              <img src='/images/appstore.png' width={28} height={28} />
+              <img
+                src='https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/appstore.png'
+                width={28}
+                height={28}
+              />
             </a>
           )}
         </div>
 
         <ul className='list-disc space-y-4 ml-5 text-lg mt-4'>
-          {(props.summary ?? []).map(item => (
-            <li key={item}>{item}</li>
+          {(summary ?? []).map(item => (
+            <li key={item} className='text-gray-400 leading-8	'>
+              {parse(item)}
+            </li>
           ))}
 
           {props.demoUrl && (
@@ -82,8 +96,8 @@ const Left = (props: Company) => {
         </ul>
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
 const Right = (props: Company) => {
   return (
@@ -104,8 +118,8 @@ const Right = (props: Company) => {
         <ImageView key={ss} url={ss} />
       ))}
     </motion.div>
-  )
-}
+  );
+};
 
 const ImageView = (props: { url: string }) => {
   return (
@@ -114,5 +128,5 @@ const ImageView = (props: { url: string }) => {
       alt=''
       className='mr-1 w-[150px] md:w-[250px] aspect-auto'
     />
-  )
-}
+  );
+};

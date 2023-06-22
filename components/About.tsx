@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react'
-import { motion } from 'framer-motion'
-import SectionHeader from './SectionHeader'
-import { motionConfig } from '../common'
-import Link from 'next/link'
+import React from 'react';
+import { motion } from 'framer-motion';
+import SectionHeader from './SectionHeader';
+import { motionConfig } from '../common';
+import Link from 'next/link';
 
-type Props = {}
+type Props = {};
 
 export default function About({}: Props) {
   return (
@@ -15,15 +15,11 @@ export default function About({}: Props) {
     >
       <SectionHeader title='About' />
 
-      <div className='space-y-10 px-0 md:px-10 text-2xl'>
+      <div className='space-y-10 px-0 md:px-10 text-2xl text-gray-400'>
         <p>
-          I have{' '}
-          <span className='font-bold text-3xl underline underline-offset-4'>
-            10
-          </span>{' '}
-          years of experience working as a software engineer. Some products of
-          mine serve millions of users like TokyoCatch, DoNotPay, Coinhako, and
-          Moca.
+          I have <span className='font-bold text-3xl text-white'>10</span> years
+          of experience working as a software engineer. Some products of mine
+          serve millions of users like TokyoCatch, DoNotPay, Coinhako, and Moca.
         </p>
 
         <p>
@@ -41,14 +37,11 @@ export default function About({}: Props) {
         </p>
 
         <p>
-          I have{' '}
-          <span className='font-bold text-3xl underline underline-offset-4'>
-            5
-          </span>{' '}
-          years working remotely in the US timezone, and flexible to work in any
-          time zones.
+          I have <span className='font-bold text-3xl text-white'>5</span> years
+          working remotely in the US timezone, and flexible to work in any time
+          zones.
         </p>
       </div>
     </motion.div>
-  )
+  );
 }

@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
-import SectionHeader from './SectionHeader'
-import { motion } from 'framer-motion'
-import { motionConfig } from '../common'
-import { projects } from '../data/projects'
-import { Project } from '../@types/Project'
+import React from 'react';
+import SectionHeader from './SectionHeader';
+import { motion } from 'framer-motion';
+import { motionConfig } from '../common';
+import { projects } from '../data/projects';
+import { Project } from '../@types/Project';
 
-type Props = {}
+type Props = {};
 
 export default function Projects({}: Props) {
   return (
@@ -27,7 +27,7 @@ export default function Projects({}: Props) {
 
       <div className='w-full absolute top-[30%] bg-[#f7ab0a]/10 left-0 h-[500px] -skew-y-12' />
     </motion.div>
-  )
+  );
 }
 
 const ProjectCard = (prop: Project) => {
@@ -71,7 +71,11 @@ const ProjectCard = (prop: Project) => {
               rel='noreferrer'
               className='ml-4'
             >
-              <img src='/images/appstore.png' width={28} height={28} />
+              <img
+                src='https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/appstore.png'
+                width={28}
+                height={28}
+              />
             </a>
           )}
           {prop.githubUrl && (
@@ -82,7 +86,7 @@ const ProjectCard = (prop: Project) => {
               className='ml-4'
             >
               <img
-                src='/images/github.png'
+                src='https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/github.png'
                 className='aspect-square'
                 width={28}
               />
@@ -118,13 +122,13 @@ const ProjectCard = (prop: Project) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Tag = (props: { title: string }) => {
   return (
     <p className='bg-[rgb(36,36,36)] px-3 md:px-5 py-2 mr-1 mt-1 rounded-full font-semibold text-sm md:text-lg whitespace-nowrap'>
       {props.title}
     </p>
-  )
-}
+  );
+};

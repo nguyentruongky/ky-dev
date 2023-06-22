@@ -1,17 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
-import { SocialIcon } from 'react-social-icons'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-type Props = {}
+import React from 'react';
+import { SocialIcon } from 'react-social-icons';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
-export default function Header({}: Props) {
+export default function Header() {
   return (
     <header className='sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center p-5 bg-[rgb(36,36,36)]'>
       <LeftView />
       <RightView />
     </header>
-  )
+  );
 }
 
 const LeftView = () => {
@@ -42,9 +41,21 @@ const LeftView = () => {
         fgColor='gray'
         bgColor='transparent'
       />
+      <a
+        href='/assets/Ky Nguyen - Full-Stack Engineer.pdf'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <img
+          src='https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/download.png'
+          width={28}
+          height={28}
+          alt='download'
+        />
+      </a>
     </motion.div>
-  )
-}
+  );
+};
 
 const RightView = () => {
   return (
@@ -76,5 +87,5 @@ const RightView = () => {
         </p>
       </Link>
     </motion.div>
-  )
-}
+  );
+};
