@@ -15,11 +15,13 @@ export default function About({}: Props) {
     >
       <SectionHeader title='About' />
 
-      <div className='space-y-10 px-0 md:px-10 text-2xl text-gray-400'>
+      <div className='space-y-10 px-0 md:px-10 lg:text-3xl text-2xl text-gray-400'>
         <p>
-          I have <span className='font-bold text-3xl text-white'>10</span> years
-          of experience working as a software engineer. Some products of mine
-          serve millions of users like TokyoCatch, DoNotPay, Coinhako, and Moca.
+          I have{' '}
+          <span className='font-bold lg:text-3xl text-2xl text-white'>10</span>{' '}
+          years of experience working as a software engineer. Some products of
+          mine serve millions of users like TokyoCatch, DoNotPay, Coinhako, and
+          Moca.
         </p>
 
         <p>
@@ -37,9 +39,10 @@ export default function About({}: Props) {
         </p>
 
         <p>
-          I have <span className='font-bold text-3xl text-white'>5</span> years
-          working remotely in the US timezone, and flexible to work in any time
-          zones.
+          I have{' '}
+          <span className='font-bold lg:text-3xl text-2xl text-white'>5</span>{' '}
+          years working remotely in the US timezone, and flexible to work in any
+          time zones.
         </p>
       </div>
     </motion.div>
