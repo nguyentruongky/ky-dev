@@ -6,10 +6,10 @@ export default function Trang({ sheetdata }: { sheetdata: Row[] }) {
       <br />
       {sheetdata.map((row: Row) => {
         return (
-          <div>
+          <div key={row.timestamp}>
             <h1>{row.hoiThanh.toUpperCase()}</h1>
             {row.danhSach.map((person) => {
-              return <div>{person?.name}</div>;
+              return <div key={person.name}>{person?.name}</div>;
             })}
             <br />
           </div>
@@ -96,9 +96,13 @@ const analyzeDanhSach = (input: { raw: string }): Attendee[] => {
     const separator = separators[i];
     const names = splitStringBy({ source: raw, separator });
     if (names.length !== 0) {
-      elements = names.flatMap((name) => {
-        return analyzeName(name);
+      names.forEach((name) => {
+        const person = analyzeName(name);
+        if (person) {
+          elements.push(person);
+        }
       });
+
       break;
     }
   }
@@ -179,7 +183,9 @@ const analyzeName = (name: string) => {
 
 function isValidDate(s: string) {
   var separators = ['\\.', '\\-', '\\/'];
-  var bits = s.split(new RegExp(separators.join('|'), 'g'));
+  var bits = s
+    .split(new RegExp(separators.join('|'), 'g'))
+    .map((item) => parseInt(item));
   var d = new Date(bits[2], bits[1] - 1, bits[0]);
   return d.getFullYear() == bits[2] && d.getMonth() + 1 == bits[1];
 }
