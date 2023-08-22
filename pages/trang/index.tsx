@@ -34,7 +34,7 @@ export default function Trang({ sheetdata }: { sheetdata: Row[] }) {
           <div key={row.timestamp}>
             <h1 className='font-bold uppercase  text-2xl'>{row.hoiThanh}</h1>
             <h1 className='font-bold'>
-              Đăng ký: {new Date(row.timestamp).toDateString()}
+              Đăng ký: {new Date(row.timestamp).toString()}
             </h1>
             <h1 className='font-bold'>Số lượng: {row.soLuong}</h1>
 
