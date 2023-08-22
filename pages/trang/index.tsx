@@ -1,7 +1,7 @@
 import { templateContent } from '../../public/template';
 
 export default function Trang({ sheetdata }: { sheetdata: Row[] }) {
-  const onClickEmail = (row: Row) => {
+  const onClickCopyContent = (row: Row) => {
     let template = templateContent;
     template = template
       .replace('{hoiThanh}', row.hoiThanh)
@@ -9,19 +9,47 @@ export default function Trang({ sheetdata }: { sheetdata: Row[] }) {
       .replace('{soLuong}', row.soLuong);
 
     var wnd = window.open('about:blank', '', '_blank');
-    wnd?.document.write(`
-    <div>email: ${row.truongDoan.email}</div>
-    <div>title: Xác Nhận Đăng Ký Huấn Luyện Giáo Viên Dạy Kinh Thánh Lần 2.2023 Thành Công</div>
-    <br/>
-    <br/>
-    <br/>
-    ${template}
-    `);
-    // const title = encodeURIComponent(
-    //   `Xác Nhận Đăng Ký Huấn Luyện Giáo Viên Dạy Kinh Thánh Lần 2.2023 Thành Công`
-    // );
-    // window.location.href = `mailto:${row.truongDoan.email}?subject=${title}`;
+    wnd?.document.write(template);
   };
+
+  const onClickOpenGmail = async (row: Row) => {
+    if (!row.truongDoan.email) {
+      alert('Không có email');
+      return;
+    }
+
+    await copyToClipboard(row.truongDoan.email);
+
+    window.open(
+      'https://mail.google.com/mail/u/1/#inbox?compose=new',
+      '_blank'
+    );
+  };
+
+  const onClickCopyEmail = async (row: Row) => {
+    if (!row.truongDoan.email) {
+      alert('Không có email');
+      return;
+    }
+
+    copyToClipboard(row.truongDoan.email);
+  };
+
+  const copyToClipboard = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  };
+
+  const onClickCopyTitle = async (row: Row) => {
+    copyToClipboard(
+      'Xác Nhận Đăng Ký Huấn Luyện Giáo Viên Dạy Kinh Thánh Lần 2.2023 Thành Công'
+    );
+  };
+
   return (
     <div className='p-8'>
       <h1 className='text-3xl font-bold text-center'>
@@ -38,13 +66,35 @@ export default function Trang({ sheetdata }: { sheetdata: Row[] }) {
             </h1>
             <h1 className='font-bold'>Số lượng: {row.soLuong}</h1>
 
-            <button
-              className='underline text-blue-500'
-              onClick={() => onClickEmail(row)}
-            >
-              Gởi email xác nhận
-            </button>
+            <div className='my-4'>
+              <button
+                className='p-2 border-2	'
+                onClick={() => onClickOpenGmail(row)}
+              >
+                Open Gmail
+              </button>
 
+              <button
+                className='ml-4 p-2 border-2	'
+                onClick={() => onClickCopyEmail(row)}
+              >
+                Copy email
+              </button>
+
+              <button
+                className='mx-4 p-2 border-2	'
+                onClick={() => onClickCopyTitle(row)}
+              >
+                Copy title
+              </button>
+
+              <button
+                className='p-2 border-2	'
+                onClick={() => onClickCopyContent(row)}
+              >
+                Copy content
+              </button>
+            </div>
             {row.danhSach.map((person, index) => {
               return (
                 <div key={person.name}>
@@ -64,12 +114,12 @@ export async function getServerSideProps() {
   const req = await fetch('https://ky-dev.vercel.app/api/sheet');
   const res = await req.json();
 
-  let data = res.data as any[];
-  data.shift();
-  const rows = processData(data).reverse();
-  // const newMockData = mockData;
-  // newMockData.shift();
-  // const rows = processData(newMockData).reverse();
+  // let data = res.data as any[];
+  // data.shift();
+  // const rows = processData(data).reverse();
+  const newMockData = mockData;
+  newMockData.shift();
+  const rows = processData(newMockData).reverse();
 
   return {
     props: {
