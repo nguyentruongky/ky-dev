@@ -61,7 +61,7 @@ export default function Trang({ sheetdata }: { sheetdata: Row[] }) {
 }
 
 export async function getServerSideProps() {
-  const req = await fetch('http://localhost:3000/api/sheet');
+  const req = await fetch('https://ky-dev.vercel.app/api/sheet');
   const res = await req.json();
 
   let data = res.data as any[];
