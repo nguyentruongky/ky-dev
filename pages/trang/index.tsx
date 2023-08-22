@@ -114,12 +114,12 @@ export async function getServerSideProps() {
   const req = await fetch('https://ky-dev.vercel.app/api/sheet');
   const res = await req.json();
 
-  // let data = res.data as any[];
-  // data.shift();
-  // const rows = processData(data).reverse();
-  const newMockData = mockData;
-  newMockData.shift();
-  const rows = processData(newMockData).reverse();
+  let data = res.data as any[];
+  data.shift();
+  const rows = processData(data).reverse();
+  // const newMockData = mockData;
+  // newMockData.shift();
+  // const rows = processData(newMockData).reverse();
 
   return {
     props: {
