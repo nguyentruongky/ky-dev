@@ -2,12 +2,7 @@ import { google } from "googleapis";
 import keys from "../../key.json";
 
 export default function handler(req, res) {
-    console.log("hello in sheet.ts")
-    // return res.status(200).send({ message: "hello"})
-
     try {
-            console.log("hello in sheet.ts:1")
-
         const client = new google.auth.JWT(
             keys.client_email,
             null,
@@ -29,7 +24,6 @@ export default function handler(req, res) {
             };
 
             let data = await gsapi.spreadsheets.values.get(opt);
-            console.log("data", data)
             return res.status(200).send(JSON.stringify({error: false, data: data.data.values}));
         });
     } catch (e) {

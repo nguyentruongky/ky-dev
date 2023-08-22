@@ -1,15 +1,56 @@
+import { templateContent } from '../../public/template';
+
 export default function Trang({ sheetdata }: { sheetdata: Row[] }) {
+  const onClickEmail = (row: Row) => {
+    let template = templateContent;
+    template = template
+      .replace('{hoiThanh}', row.hoiThanh)
+      .replace('{truongDoan}', row.truongDoan.ten)
+      .replace('{soLuong}', row.soLuong);
+
+    var wnd = window.open('about:blank', '', '_blank');
+    wnd?.document.write(`
+    <div>email: ${row.truongDoan.email}</div>
+    <div>title: Xác Nhận Đăng Ký Huấn Luyện Giáo Viên Dạy Kinh Thánh Lần 2.2023 Thành Công</div>
+    <br/>
+    <br/>
+    <br/>
+    ${template}
+    `);
+    // const title = encodeURIComponent(
+    //   `Xác Nhận Đăng Ký Huấn Luyện Giáo Viên Dạy Kinh Thánh Lần 2.2023 Thành Công`
+    // );
+    // window.location.href = `mailto:${row.truongDoan.email}?subject=${title}`;
+  };
   return (
-    <div>
-      <h1>Danh sách tham dự huấn luyện đợt 2</h1>
+    <div className='p-8'>
+      <h1 className='text-3xl font-bold text-center'>
+        Danh sách tham dự huấn luyện đợt 2
+      </h1>
 
       <br />
       {sheetdata.map((row: Row) => {
         return (
           <div key={row.timestamp}>
-            <h1>{row.hoiThanh.toUpperCase()}</h1>
-            {row.danhSach.map((person) => {
-              return <div key={person.name}>{person?.name}</div>;
+            <h1 className='font-bold uppercase  text-2xl'>{row.hoiThanh}</h1>
+            <h1 className='font-bold'>
+              Đăng ký: {new Date(row.timestamp).toDateString()}
+            </h1>
+            <h1 className='font-bold'>Số lượng: {row.soLuong}</h1>
+
+            <button
+              className='underline text-blue-500'
+              onClick={() => onClickEmail(row)}
+            >
+              Gởi email xác nhận
+            </button>
+
+            {row.danhSach.map((person, index) => {
+              return (
+                <div key={person.name}>
+                  {index + 1}. {person?.name}
+                </div>
+              );
             })}
             <br />
           </div>
@@ -20,21 +61,15 @@ export default function Trang({ sheetdata }: { sheetdata: Row[] }) {
 }
 
 export async function getServerSideProps() {
-  //   const req = await fetch('http://localhost:3000/api/sheet');
-  //   const res = await req.json();
+  const req = await fetch('http://localhost:3000/api/sheet');
+  const res = await req.json();
 
-  //   let rows = res.data as any[];
-  //   rows.shift();
-
-  const newMockData = mockData;
-  newMockData.shift();
-  newMockData.shift();
-  const rows = processData(newMockData);
-
-  for (let i = 0; i < rows.length; i++) {
-    const row = rows[i];
-    console.log(i, row.danhSach, row.hoiThanh);
-  }
+  let data = res.data as any[];
+  data.shift();
+  const rows = processData(data).reverse();
+  // const newMockData = mockData;
+  // newMockData.shift();
+  // const rows = processData(newMockData).reverse();
 
   return {
     props: {
@@ -48,26 +83,21 @@ const processData = (data: any[]) => {
   const items = rows.flatMap((row) => {
     const danhSachRaw = row[3] as string;
 
-    if (row[1].includes('BÌNH TÂN')) {
-      console.log('helloe');
-    }
-
     const danhSachFinal = analyzeDanhSach({ raw: danhSachRaw.trim() });
 
     return {
       timestamp: row[0],
-      hoiThanh: row[1],
-      soLuong: row[2],
+      hoiThanh: row[1].trim(),
+      soLuong: row[2].trim(),
       danhSach: danhSachFinal,
       truongDoan: {
-        ten: row[4],
-        email: row[5],
-        phone: row[6]
+        ten: row[4].trim(),
+        email: row[5].trim(),
+        phone: row[6].trim()
       }
     };
   });
 
-  //   console.log(items);
   return items;
 };
 
@@ -110,7 +140,7 @@ const analyzeDanhSach = (input: { raw: string }): Attendee[] => {
   if (elements.length === 0) {
     return [
       {
-        name: raw
+        name: capitalizeWords(raw)
       }
     ];
   }
@@ -127,8 +157,8 @@ const splitStringBy = (input: { source: string; separator: string }) => {
 };
 
 const analyzeName = (name: string) => {
-  const separators = [',', '\n', '\t', '.', '  '];
-  let result: Attendee = { name };
+  const separators = [',', '\n', '\t', '.', '  ', ' Và '];
+  let result: Attendee = { name: capitalizeWords(name) };
   for (let i = 0; i < separators.length; i++) {
     const separator = separators[i];
     const elements = splitStringBy({ source: name, separator });
@@ -142,30 +172,28 @@ const analyzeName = (name: string) => {
       const numberValue = parseInt(element);
 
       if (numberValue > 1900 && numberValue < 3000) {
-        result.dob = element;
+        result.dob = element.trim();
         continue;
       }
 
       // dob
       if (isValidDate(element)) {
-        result.dob = element;
+        result.dob = element.trim();
         continue;
       }
 
       // phone
       if (numberValue && numberValue > 10000 && element.length > 5) {
-        result.phone = element;
+        result.phone = element.trim();
         continue;
       }
 
       // name
       if (element.length > 4) {
-        result.name = element;
+        result.name = capitalizeWords(element.trim());
         const otherResult = analyzeName(element);
         if (otherResult !== null) {
           result = otherResult;
-        } else {
-          console.log('otherResult is null -> ignore');
         }
 
         continue;
@@ -188,6 +216,14 @@ function isValidDate(s: string) {
     .map((item) => parseInt(item));
   var d = new Date(bits[2], bits[1] - 1, bits[0]);
   return d.getFullYear() == bits[2] && d.getMonth() + 1 == bits[1];
+}
+
+function capitalizeWords(str: string) {
+  return str
+    .toLowerCase()
+    .split(' ')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }
 
 const mockData = [
