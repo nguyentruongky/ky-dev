@@ -1,3 +1,4 @@
+import { Attendee } from "../models/Attendee";
 import { Row } from "../models/Row";
 
 export const processData = (data: any[]) => {
