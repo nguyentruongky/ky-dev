@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { templateContent } from '../../public/template';
 import { RawList, FormattedList } from './List';
+import { Row } from '../../models/Row';
 
 const emailTitle =
   'Xác Nhận Đăng Ký Huấn Luyện Giáo Viên Dạy Kinh Thánh Lần 2.2023 Thành Công';

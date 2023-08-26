@@ -1,3 +1,5 @@
+import { Row } from '../../models/Row';
+
 export const FormattedList = (row: Row) => {
   return (
     <div>

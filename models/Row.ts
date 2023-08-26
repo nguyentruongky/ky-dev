@@ -1,4 +1,6 @@
-interface Row {
+import { Attendee } from "./Attendee";
+
+export interface Row {
   timestamp: string;
   hoiThanh: string;
   soLuong: string;

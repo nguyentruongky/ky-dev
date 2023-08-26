@@ -1,6 +1,6 @@
 import { GroupView } from '../../components/TrangComponents/GroupView';
-import { mockData } from '../../data/TrangMockData';
 import { processData } from '../../logic/processingTrangData';
+import { Row } from '../../models/Row';
 
 export default function Trang({ sheetdata }: { sheetdata: Row[] }) {
   return (
@@ -11,7 +11,7 @@ export default function Trang({ sheetdata }: { sheetdata: Row[] }) {
 
       <br />
       {sheetdata.map((row: Row) => {
-        return <GroupView {...row} />;
+        return <GroupView {...row} key={row.hoiThanh} />;
       })}
     </div>
   );

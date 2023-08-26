@@ -1,3 +1,5 @@
+import { Row } from "../models/Row";
+
 export const processData = (data: any[]) => {
   const rows = data;
   const items = rows.flatMap((row) => {
