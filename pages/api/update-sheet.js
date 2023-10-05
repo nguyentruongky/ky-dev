@@ -18,9 +18,9 @@ export default async function handler(req, res) {
 
   await doc.loadInfo();
 
-  const sheet = doc.sheetsByTitle['Sheet1']; // or use `doc.sheetsById[id]` or `doc.sheetsByTitle[title]`
+  const sheet = doc.sheetsByTitle['Database'];
 
-  const rows = await sheet.getRows(); // can pass in { limit, offset }
+  const rows = await sheet.getRows();
   rows[0].set('Score', 5);
   await rows[0].save();
   res.send(200);

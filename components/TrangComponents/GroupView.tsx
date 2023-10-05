@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { templateContent } from '../../public/template';
 import { RawList, FormattedList } from './List';
 import { Row } from '../../models/Row';
+import sessionData from '../../data/sessons-data';
 
 const emailTitle =
   'Xác Nhận Đăng Ký Huấn Luyện Giáo Viên Dạy Kinh Thánh Lần 2.2023 Thành Công';
 
-export const GroupView = (row: Row) => {
+export const GroupView = (props: { row: Row; setEditVisible: () => void }) => {
+  const { row } = props;
   const [rawListVisible, setRawListVisible] = useState(false);
   const onClickCopyContent = (row: Row) => {
     let template = templateContent;
@@ -73,22 +75,26 @@ export const GroupView = (row: Row) => {
     setRawListVisible(!rawListVisible);
   };
 
-  const onClickUpdateDanhSach = () => {};
+  const onClickUpdateDanhSach = () => {
+    sessionData.row = row;
+    props.setEditVisible();
+  };
 
   return (
     <div className='mt-10'>
       <div key={row.timestamp}>
         <h1 className='font-bold uppercase  text-2xl'>{row.hoiThanh}</h1>
+        <h1 className='font-bold'>Số lượng: {row.soLuong}</h1>
+
+        <h1 className='font-bold'>
+          Đăng ký: {new Date(row.timestamp).toString()}
+        </h1>
 
         <h1 className='font-bold'>
           Trưởng đoàn: {row.truongDoan.ten} - {row.truongDoan.email} -{' '}
           {row.truongDoan.phone}
         </h1>
 
-        <h1 className='font-bold'>
-          Đăng ký: {new Date(row.timestamp).toString()}
-        </h1>
-        <h1 className='font-bold'>Số lượng: {row.soLuong}</h1>
         <div className='my-4'>
           <button
             className='p-2 border-2	'
@@ -135,12 +141,12 @@ export const GroupView = (row: Row) => {
           Xem danh sách {!rawListVisible ? 'gốc' : 'đã format'}
         </div>
 
-        {/* <div
+        <div
           className='select-none underline cursor-pointer'
           onClick={onClickUpdateDanhSach}
         >
           Update danh sách
-        </div> */}
+        </div>
         <br />
       </div>
     </div>

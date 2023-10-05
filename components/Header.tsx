@@ -32,7 +32,12 @@ const LeftView = () => {
       className='flex flex-row items-center'
     >
       <SocialIcon
-        url='https://github.com/nguyentruongky33'
+        url='https://github.com/nguyentruongky'
+        fgColor='gray'
+        bgColor='transparent'
+      />
+       <SocialIcon
+        url='https://www.linkedin.com/in/kynt'
         fgColor='gray'
         bgColor='transparent'
       />
