@@ -17,7 +17,8 @@ export const companies: Company[] = [
             'Developed and seamlessly integrated MSME features as a modular package across multiple host applications in three countries.',
             'Established a strong commitment to SOLID principles, particularly in dependency inversion and single responsibility, enabling exceptional scalability and reusability.',
         ],
-        boldString: ['13 seconds'],
+        boldString: [],
+        appstoreUrl: 'https://apps.apple.com/my/app/gxbank/id6454673510',
     },
     {
         iconUrl: icons.trim,
@@ -34,11 +35,13 @@ export const companies: Company[] = [
             'https://raw.githubusercontent.com/nguyentruongky/ky-dev/main/public/images/pbs-1.png',
         ],
         summary: [
-            'Led a team of to develop a Bluetooth-enabled door unlocking mechanism with Kisi SDK, while managing a Slack bot that streamlined bookings for cafes, rooms, and events for over 2,000 members.',
-            'Streamlined employer and talent recruitment by implementing key features like internal chat with socket.io, secure Stripe payments, and an efficient check-in system, while leading a team and collaboration with the product owner and project manager to ensure project alignment and progress.',
-            'Mentored and supported two iOS developers in building complex features, including geofencing for location-based messaging and integrating image processing, video recording, and voice recording functionalities for message delivery.',
+            'Successfully led a team in developing an innovative Bluetooth-enabled door unlocking mechanism using the Kisi SDK, while expertly managing a Slack bot that optimized bookings for cafes, rooms, and events, benefiting over 2,000 members.',
+            'Enhanced the recruitment process for both employers and talents by implementing crucial features such as internal chat with socket.io, secure Stripe payments, and an efficient check-in system. Effectively guided the team and collaborated closely with the product owner and project manager to ensure seamless project alignment and progress.',
+            'Provided mentorship and support to two iOS developers, driving the development of advanced features like geofencing for location - based messaging and the integration of image processing, video recording, and voice recording functionalities for enhanced message delivery. ',
         ],
         boldString: ['2,000 members'],
+        appstoreUrl:
+            'https://apps.apple.com/in/app/general-provision/id6444879814',
     },
     {
         iconUrl: icons.alongside,
