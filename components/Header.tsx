@@ -46,7 +46,7 @@ const LeftView = () => {
                 bgColor='transparent'
             />
             <a
-                href='/assets/KyNguyen_Senior_iOS_Engineer.pdf'
+                href='/assets/ios.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='ml-4'>
